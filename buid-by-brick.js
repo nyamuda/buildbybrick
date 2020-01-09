@@ -7,41 +7,43 @@ var theForm=document.querySelector(".form-block");
 var helpCancel=document.querySelector("#popup-cancel");
 var formCancel=document.querySelector("#form-cancel");
 var submitForm=document.querySelector("#form-submit");
-var contactMobile=document.querySelector("#contact-mobile");
-var mobilePhone=document.querySelector(".mobile-phone");
+
+
 var menuIcon=document.querySelector(".menu-drop");
-var mobileBlock=document.querySelector(".mobile-block");
 var mobileSlide=document.querySelector(".mobile-slide");
-var arrowContact=document.querySelector("#mobile-arrow");
-var cancelMobile=document.querySelector("#cancel-mobile-slide");
-var clicks=0;
-contactMobile.onclick=function() {
-	
-    if(clicks==0) {
-        mobilePhone.style.transform="scale(1,1)";
-        arrowContact.innerHTML="&#9660;";
-		clicks=1
-    }
-    else if(clicks==1) {
-		mobilePhone.style.transform="scale(0,0)";
-        arrowContact.innerHTML="&#9658;";
-        
-		clicks=0;
-    
-    }
-	console.log(clicks)
-}
+
+var introImage=document.querySelector(".intro-image");
+
+
+var menuClicks=0
 menuIcon.onclick=function() {
-    mobileBlock.style.transform="translateX(-110vw)";
-    mobileSlide.style.transform="translateX(-50vw)";
+    if(menuClicks==0) {
+		mobileSlide.style.transform="translateY(10rem)";
+    mobileSlide.style.transition="transform 0.5s ease";
+	
+	//introImage.style.transform="translateY(10rem)";
+		introImage.style.transform="translateY(-25rem)";
+		
+		
+    introImage.style.transition="transform 0.5s ease-in";
+		
+		
+		
+		
+		menuClicks=1
+	}
+	else {
+		mobileSlide.style.transform="translateY(-10rem)";
     mobileSlide.style.transition="transform 0.5s ease-in-out";
+	
+	introImage.style.transform="translateY(0rem)";
+    introImage.style.transition="transform 0.3s ease-in-out";
+		
+		menuClicks=0
+	}
+	
 }
-cancelMobile.onclick=function() {
-    mobileBlock.style.transform="translateX(110vw)";
-    mobileSlide.style.transform="translateX(50vw)";
-    mobileSlide.style.transition="transform 0.5s ease-in-out";
-    
-}
+
 
 
 var numImage=1;

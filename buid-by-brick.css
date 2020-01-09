@@ -1,11 +1,13 @@
 html {
 	scroll-behavior: smooth;
+	
 }
 body {
 	font-size: 1rem;
-	overflow-x: hidden;
 	font-family: "Roboto", sans-serif;
 	background-color:#f5fafa;
+	
+	
 }
 
 a {
@@ -22,8 +24,10 @@ header {
 	justify-content: flex-start;
 	align-items: center;
 	height: 6rem;
+	z-index:4;
+	position:relative;
+	margin-top:-1rem;
 }
-
 
 #logo {
 	width: 20vw;
@@ -102,56 +106,27 @@ header {
 	display: block;
 }
 
-.mobile-block {
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	background-color: rgba(0, 0, 0, 0.6);
-	z-index: 5;
-	display: block;
-	top: 0vh;
-	left: 110vw;
-}
+
 
 .mobile-slide {
 	background-color:rgb(32,32,32);
-	position: absolute;
-	z-index: 4;
-	left: 108vw;
-	height: 100vh;
+	position:relative;
+	z-index:1;
+	left:0rem;
+	height:10rem;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly;
+	justify-content: flex-start;
 	color: white;
-	width: 42vw;
+	width:100%;
 	align-items: center;
+	top:-10rem;
+	margin-bottom:-10rem;
 }
 
-.mobile-phone {
-	position: relative;
-	top: -10vh;
-	left: 1vw;
-	transform: scale(0, 0);
-	transition: transform 0.5s ease-in-out;
-}
 
-#mobile-arrow {
-	position: relative;
-	font-size: 1rem;
-	left: 1vw;
-}
 
-#slide-menu-img {
-	width: 20vw;
-}
 
-#cancel-mobile-slide {
-	font-size: 2rem;
-	position: absolute;
-	top: -3vh;
-	left: 32vw;
-	cursor: pointer;
-}
 
 .mobile-links:hover {
 	cursor: pointer;
@@ -164,6 +139,7 @@ header {
 	border: 2px solid transparent;
 	position: relative;
 	background: url("images/brick-wall3.jpg");
+	position:relative;
 
 }
 
@@ -182,54 +158,6 @@ header {
 	margin-top: 2vh;
 }
 
-.about-us-block {
-	width: 100vw;
-	height: 100vh;
-	background-color: rgba(0, 0, 0, 0.6);
-	z-index: 1;
-	top: -150vh;
-	position: absolute;
-	display: none;
-}
-
-.about-us-content {
-	text-align: center;
-	margin: auto;
-	display: flex;
-	flex-direction: column;
-	background-color: darkslategray;
-	width: 80vw;
-	color: white;
-	height: 100vh;
-	border-radius: 10px;
-}
-
-#about-cancel {
-	position: relative;
-	top: 3vh;
-	font-size: 2rem;
-	left: 35vw;
-	cursor: pointer;
-}
-
-.about-us-content p {
-	width: 60vw;
-	margin: auto;
-	margin-top: -1vh;
-}
-
-.about-us-content h3 {
-	margin-top: -1vh;
-	text-decoration: underline;
-}
-
-#about-image {
-	width: 50vw;
-	height: 50vh;
-	margin: auto;
-	margin-top: 2vh;
-}
-
 
 .help-popup {
 	border-radius: 10px;
@@ -237,7 +165,7 @@ header {
 	color: white;
 	width: 11rem;
 	position: absolute;
-	left:110vw;
+	left:130vw;
 	top: 60vh;
 	text-align: center;
 	cursor: pointer;
@@ -250,8 +178,23 @@ header {
 }
 
 .help-input {
-	width: 15rem;
-	height: 3vh;
+	width: 19rem;
+	height:2rem;
+	border: 0.5px solid gray;
+	text-indent: 10px;
+	font-family: "Roboto", sans-serif;
+	font-size: 1rem;
+}
+
+#send-message-block {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	
+}
+#send-message-text {
+	font-size:2rem;
+	font-weight: bold;
 }
 
 #input-name {
@@ -259,17 +202,16 @@ header {
 }
 
 .form-block {
-	position: absolute;
-	width:18rem;
-	left:115vw;
-	top: 20vh;
+	position:relative;
+	width:20rem;
+	left:;
+	top: 2rem;
 	z-index: 2;
-	border-radius:5px;
 	height:auto;
-	background-color: darkslategray;
 	margin-left:0rem;
 	height: auto;
 	display:;
+	margin: auto;
 }
 
 form {
@@ -280,7 +222,7 @@ form {
 }
 
 #message-input {
-	height: 15vh;
+	height:10rem;
 }
 
 #popup-cancel {
@@ -304,17 +246,14 @@ form {
 	transform: scale(1.2);
 }
 
-#form-cancel {
-	position:relative;
-	left:7rem;
-	font-size: 2rem;
-	cursor: pointer;
-	top:-3rem;
-	color: white;
-}
+
 
 #form-submit {
 	transition: all 0.5s ease-in-out;
+	border: none;
+	background-color: rgb(32,32,32);
+	color:white;
+	padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
 #form-submit:hover {
@@ -346,21 +285,26 @@ form {
 
 .projects {
 	position: relative;
+	background-color: rgba(32,32,32,0.9);
+	color: white;
+	padding:0.5rem 0rem 2rem 0rem;
 }
 
 #projects-heading {
 	text-align: center;
 	font-size: 2rem;
 	font-weight: bold;
-	margin-bottom: 1vh;
+	position: relative;
+	top: -1rem;
 }
 
 #projects-description {
 	text-align: center;
 	width: 90vw;
 	margin: auto;
-	margin-bottom: 2vh;
 	font-size: 1rem;
+	position: relative;
+	top: -2rem;
 }
 
 .projects-img1 {
@@ -368,6 +312,8 @@ form {
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+	width: 100%;
+	text-align: center;
 }
 
 #proj-img {
@@ -384,7 +330,7 @@ form {
 }
 
 .arrows {
-	color: black;
+	color:white;
 	font-size: 3rem;
 	cursor: pointer;
 }
@@ -393,6 +339,9 @@ form {
 	font-size: 1.5rem;
 	margin-bottom: -5vh;
 	color: orange;
+}
+.services {
+	
 }
 
 #services-heading {
@@ -436,16 +385,26 @@ form {
 	flex-direction: column;
 	text-align: center;
 	width: 100%;
+	background-color: rgba(32,32,32,0.9);
+	color: white;
+	padding-top:1rem;
+	padding-bottom:1rem;
+	justify-content: flex-start;
+	
 }
 
 #about-mobile-describe {
 	width: 90vw;
 	margin: auto;
+	position: relative;
+	top:-2.5rem;
 }
 
 #about-mobile-title {
 	font-size: 2rem;
 	font-weight: bold;
+	position: relative;
+	top: -1.5rem;
 }
 
 .about-desktop {
@@ -471,10 +430,11 @@ form {
 }
 
 footer {
+	position: relative;
 	background-color:rgb(32,32,32);
 	width: 100%;
 	height: auto;
-	margin-top: 5vh;
+	top:3rem;
 	color: white;
 }
 
@@ -498,8 +458,16 @@ footer {
 	header {
 		height: 6rem;
 	}
+	.menu-drop {
+		margin-left: 60vw;
+	}
+	.form-block {
+		width:30rem;
+	}
+	.help-input {
+		width:28rem;
+	}
 
-	#logo {}
 
 	.intro-image {
 		height: 10rem;
@@ -531,11 +499,14 @@ footer {
 	}
 
 	.menu-drop {
-		margin-left: 60vw;
+		margin-left: 70vw;
 	}
 
-	#cancel-mobile-slide {
-		top: 0vh;
+	.form-block {
+		width:40rem;
+	}
+	.help-input {
+		width:38rem;
 	}
 
 	#proj-img {
