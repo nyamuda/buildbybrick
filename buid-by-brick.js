@@ -2,9 +2,6 @@ var slide=document.querySelector("#proj-img");
 var imageNum=document.querySelector(".proj-num");
 var leftArrow=document.querySelector("#arrow-left");
 var rightArrow=document.querySelector("#arrow-right");
-var aboutLink=document.querySelector("#about-link");
-var aboutBlock=document.querySelector(".about-us-block");
-var aboutCancel=document.querySelector("#about-cancel");
 var popUp=document.querySelector(".help-popup");
 var theForm=document.querySelector(".form-block");
 var helpCancel=document.querySelector("#popup-cancel");
@@ -17,16 +14,22 @@ var mobileBlock=document.querySelector(".mobile-block");
 var mobileSlide=document.querySelector(".mobile-slide");
 var arrowContact=document.querySelector("#mobile-arrow");
 var cancelMobile=document.querySelector("#cancel-mobile-slide");
+var clicks=0;
 contactMobile.onclick=function() {
-    if(mobilePhone.style.transform==='scale(1,1)') {
-        mobilePhone.style.transform="scale(0,0)";
-        arrowContact.innerHTML="&#9658;";
-    }
-    else {
+	
+    if(clicks==0) {
         mobilePhone.style.transform="scale(1,1)";
         arrowContact.innerHTML="&#9660;";
+		clicks=1
+    }
+    else if(clicks==1) {
+		mobilePhone.style.transform="scale(0,0)";
+        arrowContact.innerHTML="&#9658;";
+        
+		clicks=0;
     
     }
+	console.log(clicks)
 }
 menuIcon.onclick=function() {
     mobileBlock.style.transform="translateX(-110vw)";
@@ -121,18 +124,7 @@ function myImages() {
         }
     },5000)
 }
-aboutLink.onclick=function() {
-    aboutBlock.style.transform="translateY(150vh)";
-    aboutBlock.style.transition="transform 0.6s ease-in-out";
-    aboutBlock.style.position="fixed";
-    
-}
-aboutCancel.onclick=function() {
-    aboutBlock.style.transform="translateY(-150vh)";
-    aboutBlock.style.transition="transform 0.8s ease-in-out";
-    aboutBlock.style.position="absolute";
-    
-}
+
 
 window.onload=myImages();
 window.onload=helpPopUp();

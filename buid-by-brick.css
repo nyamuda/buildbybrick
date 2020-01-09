@@ -1,7 +1,11 @@
+html {
+	scroll-behavior: smooth;
+}
 body {
 	font-size: 1rem;
 	overflow-x: hidden;
 	font-family: "Roboto", sans-serif;
+	background-color:#f5fafa;
 }
 
 a {
@@ -13,7 +17,7 @@ header {
 	display: flex;
 	flex-direction: row;
 	width: 100%;
-	background-color: darkslategray;
+	background-color:rgba(32,32,32);
 	color: white;
 	justify-content: flex-start;
 	align-items: center;
@@ -42,6 +46,9 @@ header {
 #projects-link:hover {
 	color: orange;
 	text-decoration: line-through;
+}
+#projects-link {
+	transition: all 0.5s ease-in-out;
 }
 
 #about-link {
@@ -107,7 +114,7 @@ header {
 }
 
 .mobile-slide {
-	background-color: darkslategray;
+	background-color:rgb(32,32,32);
 	position: absolute;
 	z-index: 4;
 	left: 108vw;
@@ -230,11 +237,12 @@ header {
 	color: white;
 	width: 11rem;
 	position: absolute;
-	left: 130vw;
+	left:110vw;
 	top: 60vh;
 	text-align: center;
 	cursor: pointer;
 	z-index: 2;
+	height:5rem;
 }
 
 .help-popup:hover {
@@ -242,33 +250,33 @@ header {
 }
 
 .help-input {
-	width: 70vw;
+	width: 15rem;
 	height: 3vh;
 }
 
 #input-name {
-	margin-top: 3vh;
+	margin-top:-4rem;
 }
 
 .form-block {
 	position: absolute;
-	width: 80vw;
-	left: 110vw;
+	width:18rem;
+	left:115vw;
 	top: 20vh;
-	display: block;
 	z-index: 2;
-	border-radius: 20px;
-	height: 50vh;
+	border-radius:5px;
+	height:auto;
 	background-color: darkslategray;
-	margin-left: 10vw;
+	margin-left:0rem;
 	height: auto;
+	display:;
 }
 
 form {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 5vh 0vw 5vh 0vw;
+	padding: 1rem 0vw 1rem 0vw;
 }
 
 #message-input {
@@ -276,9 +284,9 @@ form {
 }
 
 #popup-cancel {
-	position: absolute;
-	left: 9rem;
-	top: -4vh;
+	position:relative;
+	left:4rem;
+	top:-1.5rem;
 	cursor: pointer;
 	font-size: 1.5rem;
 	color: black;
@@ -286,9 +294,10 @@ form {
 	color: white;
 }
 
-.help-popup p {
-	padding: 1%;
-	margin-top: 4vh;
+
+#pop-up-text {
+	position: relative;
+	top:-3rem;
 }
 
 #popup-cancel:hover {
@@ -296,11 +305,11 @@ form {
 }
 
 #form-cancel {
-	position: absolute;
-	left: 70vw;
+	position:relative;
+	left:7rem;
 	font-size: 2rem;
 	cursor: pointer;
-	top: -4vh;
+	top:-3rem;
 	color: white;
 }
 
@@ -426,10 +435,11 @@ form {
 	display: block;
 	flex-direction: column;
 	text-align: center;
+	width: 100%;
 }
 
 #about-mobile-describe {
-	width: 80vw;
+	width: 90vw;
 	margin: auto;
 }
 
@@ -461,7 +471,7 @@ form {
 }
 
 footer {
-	background-color: darkslategray;
+	background-color:rgb(32,32,32);
 	width: 100%;
 	height: auto;
 	margin-top: 5vh;
@@ -504,27 +514,7 @@ footer {
 		margin-bottom: -2rem;
 	}
 
-	.help-popup {}
-
-	#popup-cancel {
-		top: -1.5rem;
-	}
-
-	.form-block {
-		width: 60vw;
-		margin-left: 20vw;
-	}
-
-	.help-input {
-		width: 50vw;
-		height: 4vh;
-	}
-
-	#form-cancel {
-		left: 55vw;
-		top: -2rem;
-
-	}
+	
 }
 
 @media (min-width:768px) and (max-width:1023.98px) {
@@ -555,29 +545,6 @@ footer {
 
 	#we-do-heading {
 		margin-bottom: -2rem;
-	}
-
-	.help-popup {}
-
-	#popup-cancel {
-		top: -1.5rem;
-	}
-
-	.form-block {
-		width: 60vw;
-		margin-left: 20vw;
-	}
-
-	.help-input {
-		width: 50vw;
-		height: 4vh;
-	}
-
-	#form-cancel {}
-
-	#form-cancel {
-		left: 55vw;
-		top: -2rem;
 	}
 
 	.footer-items {
@@ -611,7 +578,7 @@ footer {
 	}
 
 	.clipart {
-		background-color: rgba(128, 128, 128, 0.1);
+		background-color:#f5fafa;
 		padding-top: 2rem;
 		margin-top: -1rem;
 	}
@@ -635,7 +602,7 @@ footer {
 
 	.description1 {
 		width: 100%;
-		background-color: rgba(128, 128, 128, 0.1);
+		background-color:#f5fafa;
 	}
 
 	#projects-description {
@@ -715,18 +682,4 @@ footer {
 		width: 4vw;
 	}
 
-	.form-block {
-		width: 30vw;
-		margin-left: 35vw;
-	}
-
-	.help-input {
-		width: 25vw;
-		height: 3vh;
-	}
-
-	#form-cancel {
-		left: 26vw;
-		top: -1rem;
-	}
 }
