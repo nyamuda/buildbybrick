@@ -133,29 +133,33 @@ header {
 }
 
 .intro-image {
-	width: auto;
-	height: 30vh;
+	width:100%;
 	display: block;
-	border: 2px solid transparent;
 	position: relative;
 	background: url("images/brick-wall3.jpg");
 	position:relative;
+	height: 10rem;
 
 }
 
-.intro-image img {
-	max-width: 100%;
-	display: block;
-	height: auto;
-}
+
 
 .intro-image p {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	text-align: center;
-	width: 90vw;
+	width:100%;
 	color: white;
 	font-size: 1.5rem;
 	margin: auto;
-	margin-top: 2vh;
+	height:10rem;
+	background-color:rgba(0,0,0,0.5);
+}
+
+#intro-text1 {
+	width: 95%;
+	margin: auto;
 }
 
 
@@ -164,17 +168,19 @@ header {
 	background-color: darkorange;
 	color: white;
 	width: 11rem;
-	position: absolute;
-	left:130vw;
+	position:fixed;
 	top: 60vh;
+	left:3rem;
 	text-align: center;
 	cursor: pointer;
-	z-index: 2;
+	z-index: 1;
 	height:5rem;
+	transition: all 0.3s ease-in-out;
+	transform: scale(0);
 }
 
 .help-popup:hover {
-	background-color: darkslategray;
+	background-color:rgb(32,32,32);
 }
 
 .help-input {
@@ -206,11 +212,10 @@ header {
 	width:20rem;
 	left:;
 	top: 2rem;
-	z-index: 2;
 	height:auto;
 	margin-left:0rem;
 	height: auto;
-	display:;
+	display:block;
 	margin: auto;
 }
 
@@ -300,11 +305,11 @@ form {
 
 #projects-description {
 	text-align: center;
-	width: 90vw;
+	width: 90%;
 	margin: auto;
 	font-size: 1rem;
 	position: relative;
-	top: -2rem;
+	top:-2rem;
 }
 
 .projects-img1 {
@@ -321,18 +326,15 @@ form {
 	height: 30vh;
 }
 
-.proj-num {
-	position: absolute;
-	left: 30vw;
-	color: white;
-	font-family: monospace;
-	font-size: 2rem;
-}
+
 
 .arrows {
 	color:white;
 	font-size: 3rem;
 	cursor: pointer;
+}
+#desktop-projects {
+	display: none;
 }
 
 #we-do-heading {
@@ -485,7 +487,7 @@ footer {
 	
 }
 
-@media (min-width:768px) and (max-width:1023.98px) {
+@media (min-width:768px) {
 	header {
 		height: 6rem;
 	}
@@ -545,7 +547,6 @@ footer {
 	}
 
 	.intro-image {
-		height: 25rem;
 	}
 
 	.clipart {
@@ -555,13 +556,10 @@ footer {
 	}
 
 	.clipart img {
-		width: 4vw;
+		width:2rem;
 	}
 
 	.intro-image p {
-		width: 50vw;
-		margin-top: 8rem;
-		font-size: 2rem;
 	}
 
 	.description1 p {
@@ -575,14 +573,79 @@ footer {
 		width: 100%;
 		background-color:#f5fafa;
 	}
-
-	#projects-description {
-		width: 60vw;
+	.projects {
+		display: none;
 	}
+	
+	
+	#proj-desktop-container {
+		width: 100%;
+		margin-bottom: 2rem;
+	}
+	#proj-desk-heading {
+		font-size: 2rem;
+		text-align: center;
+		font-weight: bold;
+	}
+	#proj-desk-description {
+		text-align: center;
+		width: 60%;
+		margin: auto;
+		margin-top: -1rem;
+	}
+	
+	
+	
 
-	#proj-img {
-		width: 40rem;
-		height: 30rem;
+	
+	
+	
+	#desktop-projects {
+		display: block;
+		width: 98%;
+		display: grid;
+		grid-template-columns:32% 34% 32%;
+		grid-template-rows:repeat(8,300px);
+		grid-column-gap:4px;
+		grid-row-gap: 4px;
+		height: auto;
+		border: 1px solid red;
+		margin: auto;
+	}
+	
+	
+	#desktop-projects img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		
+	}
+	
+	
+	
+	#desk-img1 {
+		border: 1px solid;
+		
+	
+	}
+	#desk-img9 {
+		grid-area: 2/1/3/3;
+		width: auto;
+	}
+	#desk-img5 {
+		grid-area: 1/3/3/4;
+	}
+	#desk-img8 {
+		grid-area: 3/1/5/2;
+	}
+	#desk-img17 {
+		grid-area: 5/2/6/4;	
+	}
+	#desk-img16 {
+		grid-area: 6/2/8/3;	
+	}
+	#desk-img18 {
+		grid-area: 6/3/8/4;	
 	}
 
 	#we-do-heading {
@@ -596,12 +659,17 @@ footer {
 		margin-top: 2rem;
 		padding-top: 2rem;
 		padding-bottom: 2rem;
+		width: 98%;
+		margin: auto;
 
 	}
 
 	.service-icons {
 		display: flex;
 		flex-direction: row;
+		border: 1px solid darkorange;
+		margin-top:1rem;
+		border-radius: 10px;
 	}
 
 	.service-icons img {
