@@ -54,15 +54,18 @@ function helpPopUp() {
         popUp.style.transform="scale(1,1)";
     },2000)
 }
+
+
 popUp.onclick=function() {
 	
     popUp.style.display="none";
 	
-	linkAndSendMessage.href="";
 	
 	
     
 }
+
+
 helpCancel.onclick=function() {
     popUp.style.transform="scale(0)";
     popUp.style.transition="transform 0.5s ease-in-out";

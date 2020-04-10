@@ -1,13 +1,14 @@
 html {
 	scroll-behavior: smooth;
-	
+
 }
+
 body {
 	font-size: 1rem;
 	font-family: "Roboto", sans-serif;
-	background-color:#f5fafa;
-	
-	
+	background-color: #f5fafa;
+
+
 }
 
 a {
@@ -19,14 +20,14 @@ header {
 	display: flex;
 	flex-direction: row;
 	width: 100%;
-	background-color:rgba(32,32,32);
+	background-color: rgba(32, 32, 32);
 	color: white;
 	justify-content: flex-start;
 	align-items: center;
 	height: 6rem;
-	z-index:4;
-	position:relative;
-	margin-top:-1rem;
+	z-index: 4;
+	position: relative;
+	margin-top: -1rem;
 }
 
 #logo {
@@ -51,12 +52,14 @@ header {
 	color: orange;
 	text-decoration: line-through;
 }
+
 #projects-link {
-	transition: all 0.5s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
 #about-link {
 	cursor: pointer;
+	transition: all 0.3s ease-in-out;
 }
 
 #about-link:hover {
@@ -69,6 +72,10 @@ header {
 	top: 0vh;
 }
 
+.contact_us {
+	transition: all 0.3s ease-in-out;
+}
+
 .contacting:hover .contact_us {
 	color: orange;
 	text-decoration: line-through;
@@ -79,7 +86,7 @@ header {
 }
 
 .phone-email {
-	background-color: darkslategrey;
+	background-color:rgb(32,32,32);
 	width: 10vw;
 	padding-left: 0.5vw;
 	position: absolute;
@@ -89,8 +96,11 @@ header {
 	border-bottom-right-radius: 5%;
 	top: 6vh;
 	z-index: 1;
+	transition: all 0.3s ease-in-out;
 }
-
+.phone-email p {
+	transition: all 0.5s ease-in-out;
+}
 .phone-email p:hover {
 	background-color: orange;
 }
@@ -109,19 +119,19 @@ header {
 
 
 .mobile-slide {
-	background-color:rgb(32,32,32);
-	position:relative;
-	z-index:1;
-	left:0rem;
-	height:10rem;
+	background-color: rgb(32, 32, 32);
+	position: relative;
+	z-index: 1;
+	left: 0rem;
+	height: 10rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	color: white;
-	width:100%;
+	width: 100%;
 	align-items: center;
-	top:-10rem;
-	margin-bottom:-10rem;
+	top: -10rem;
+	margin-bottom: -10rem;
 }
 
 
@@ -132,60 +142,63 @@ header {
 	cursor: pointer;
 }
 
-.intro-image {
-	width:100%;
+.intro-image, .intro-image2 {
+	width: 100%;
 	display: block;
 	position: relative;
 	background: url("images/brick-wall3.jpg");
-	position:relative;
+	position: relative;
 	height: 10rem;
 
 }
 
 
 
-.intro-image p {
+.intro-image p, .intro-image2 p {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	text-align: center;
-	width:100%;
+	width: 100%;
 	color: white;
 	font-size: 1.5rem;
 	margin: auto;
-	height:10rem;
-	background-color:rgba(0,0,0,0.5);
+	height: 10rem;
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
-#intro-text1 {
+#intro-text1, #intro-text2 {
 	width: 95%;
 	margin: auto;
 }
 
+.intro-image2 {
+	display: none;
+}
 
 .help-popup {
 	border-radius: 10px;
 	background-color: darkorange;
 	color: white;
 	width: 11rem;
-	position:fixed;
+	position: fixed;
 	top: 60vh;
-	left:3rem;
+	left: 3rem;
 	text-align: center;
 	cursor: pointer;
 	z-index: 1;
-	height:5rem;
-	transition: all 0.3s ease-in-out;
+	height: 5rem;
+	transition: all 0.5s ease-in-out;
 	transform: scale(0);
 }
 
 .help-popup:hover {
-	background-color:rgb(32,32,32);
+	background-color: rgb(32, 32, 32);
 }
 
 .help-input {
 	width: 19rem;
-	height:2rem;
+	height: 2rem;
 	border: 0.5px solid gray;
 	text-indent: 10px;
 	font-family: "Roboto", sans-serif;
@@ -196,26 +209,27 @@ header {
 	position: relative;
 	width: 100%;
 	text-align: center;
-	
+
 }
+
 #send-message-text {
-	font-size:2rem;
+	font-size: 2rem;
 	font-weight: bold;
 }
 
 #input-name {
-	margin-top:-4rem;
+	margin-top: -4rem;
 }
 
 .form-block {
-	position:relative;
-	width:20rem;
-	left:;
+	position: relative;
+	width: 20rem;
+	left: ;
 	top: 2rem;
-	height:auto;
-	margin-left:0rem;
 	height: auto;
-	display:block;
+	margin-left: 0rem;
+	height: auto;
+	display: block;
 	margin: auto;
 }
 
@@ -227,13 +241,13 @@ form {
 }
 
 #message-input {
-	height:10rem;
+	height: 10rem;
 }
 
 #popup-cancel {
-	position:relative;
-	left:4rem;
-	top:-1.5rem;
+	position: relative;
+	left: 4rem;
+	top: -1.5rem;
 	cursor: pointer;
 	font-size: 1.5rem;
 	color: black;
@@ -244,7 +258,7 @@ form {
 
 #pop-up-text {
 	position: relative;
-	top:-3rem;
+	top: -3rem;
 }
 
 #popup-cancel:hover {
@@ -256,9 +270,10 @@ form {
 #form-submit {
 	transition: all 0.5s ease-in-out;
 	border: none;
-	background-color: rgb(32,32,32);
-	color:white;
+	background-color: rgb(32, 32, 32);
+	color: white;
 	padding: 0.5rem 1rem 0.5rem 1rem;
+	cursor: pointer;
 }
 
 #form-submit:hover {
@@ -290,9 +305,9 @@ form {
 
 .projects {
 	position: relative;
-	background-color: rgba(32,32,32,0.9);
+	background-color: rgba(32, 32, 32, 0.9);
 	color: white;
-	padding:0.5rem 0rem 2rem 0rem;
+	padding: 0.5rem 0rem 2rem 0rem;
 }
 
 #projects-heading {
@@ -309,7 +324,7 @@ form {
 	margin: auto;
 	font-size: 1rem;
 	position: relative;
-	top:-2rem;
+	top: -2rem;
 }
 
 .projects-img1 {
@@ -329,22 +344,26 @@ form {
 
 
 .arrows {
-	color:white;
+	color: white;
 	font-size: 3rem;
 	cursor: pointer;
 }
+
 #desktop-projects {
 	display: none;
 }
+#proj-desktop-container {
+	display: none;
+}
+
 
 #we-do-heading {
 	font-size: 1.5rem;
 	margin-bottom: -5vh;
 	color: orange;
 }
-.services {
-	
-}
+
+.services {}
 
 #services-heading {
 	font-size: 2rem;
@@ -387,19 +406,19 @@ form {
 	flex-direction: column;
 	text-align: center;
 	width: 100%;
-	background-color: rgba(32,32,32,0.9);
+	background-color: rgba(32, 32, 32, 0.9);
 	color: white;
-	padding-top:1rem;
-	padding-bottom:1rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 	justify-content: flex-start;
-	
+
 }
 
 #about-mobile-describe {
 	width: 90vw;
 	margin: auto;
 	position: relative;
-	top:-2.5rem;
+	top: -2.5rem;
 }
 
 #about-mobile-title {
@@ -433,10 +452,10 @@ form {
 
 footer {
 	position: relative;
-	background-color:rgb(32,32,32);
+	background-color: rgb(32, 32, 32);
 	width: 100%;
 	height: auto;
-	top:3rem;
+	top: 3rem;
 	color: white;
 }
 
@@ -460,14 +479,17 @@ footer {
 	header {
 		height: 6rem;
 	}
+
 	.menu-drop {
 		margin-left: 60vw;
 	}
+
 	.form-block {
-		width:30rem;
+		width: 30rem;
 	}
+
 	.help-input {
-		width:28rem;
+		width: 28rem;
 	}
 
 
@@ -484,7 +506,7 @@ footer {
 		margin-bottom: -2rem;
 	}
 
-	
+
 }
 
 @media (min-width:768px) {
@@ -493,7 +515,12 @@ footer {
 	}
 
 	.intro-image {
-		height: 10em;
+		height: 14em;
+	}
+	
+	.intro-image p {
+		height: 14rem;
+
 	}
 
 	#logo {
@@ -503,12 +530,17 @@ footer {
 	.menu-drop {
 		margin-left: 70vw;
 	}
+	
+	.clipart img {
+		width: 2.5rem;
+	}
 
 	.form-block {
-		width:40rem;
+		width: 40rem;
 	}
+
 	.help-input {
-		width:38rem;
+		width: 38rem;
 	}
 
 	#proj-img {
@@ -518,6 +550,10 @@ footer {
 
 	#we-do-heading {
 		margin-bottom: -2rem;
+	}
+	
+	.service-icons img {
+		width:2.5rem;
 	}
 
 	.footer-items {
@@ -540,27 +576,47 @@ footer {
 	.menu-drop {
 		display: none;
 	}
+	.mobile-slide {
+		display: none;
+	}
 
 	.header-end {
 		display: flex;
 		margin-top: 5px;
 	}
-
 	.intro-image {
+		display: none;
+	}
+
+	.intro-image2 {
+		display: block;
+		height: 25rem;
+	}
+
+	.intro-image2 p {
+		height: 25rem;
+
+	}
+
+	#intro-text2 {
+		width: 60%;
 	}
 
 	.clipart {
-		background-color:#f5fafa;
+		background-color: #f5fafa;
 		padding-top: 2rem;
 		margin-top: -1rem;
+
 	}
 
 	.clipart img {
-		width:2rem;
+		width: 2.5rem;
+	}
+	
+	.help-popup {
+		left:70rem;
 	}
 
-	.intro-image p {
-	}
 
 	.description1 p {
 		width: 60vw;
@@ -571,81 +627,96 @@ footer {
 
 	.description1 {
 		width: 100%;
-		background-color:#f5fafa;
+		background-color: #f5fafa;
 	}
+
 	.projects {
 		display: none;
 	}
-	
-	
+
+
 	#proj-desktop-container {
 		width: 100%;
 		margin-bottom: 2rem;
 	}
+
 	#proj-desk-heading {
 		font-size: 2rem;
 		text-align: center;
 		font-weight: bold;
 	}
+
 	#proj-desk-description {
 		text-align: center;
 		width: 60%;
 		margin: auto;
 		margin-top: -1rem;
 	}
-	
-	
-	
 
-	
-	
-	
+
+
+
+
+
+
 	#desktop-projects {
 		display: block;
-		width: 98%;
+		width: 95%;
+		position: relative;
 		display: grid;
-		grid-template-columns:32% 34% 32%;
-		grid-template-rows:repeat(8,300px);
+		grid-template-columns: 32.7% 34% 32.7%;
+		grid-template-rows: repeat(8, 400px);
 		grid-column-gap:4px;
 		grid-row-gap: 4px;
 		height: auto;
-		border: 1px solid red;
 		margin: auto;
 	}
-	
-	
+
+
 	#desktop-projects img {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		
+
 	}
-	
-	
-	
+
+
+
 	#desk-img1 {
 		border: 1px solid;
-		
-	
+
+
 	}
+	#desk-img4 {
+		grid-area: 7/1/9/2;
+	}
+
 	#desk-img9 {
 		grid-area: 2/1/3/3;
 		width: auto;
 	}
+
 	#desk-img5 {
 		grid-area: 1/3/3/4;
 	}
+
 	#desk-img8 {
 		grid-area: 3/1/5/2;
 	}
+
 	#desk-img17 {
-		grid-area: 5/2/6/4;	
+		grid-area: 5/2/6/4;
 	}
+
 	#desk-img16 {
-		grid-area: 6/2/8/3;	
+		grid-area: 6/2/8/3;
 	}
+
 	#desk-img18 {
-		grid-area: 6/3/8/4;	
+		grid-area: 6/3/8/4;
+	}
+	#desk-img13 {
+		grid-area: 1/1/2/2;
 	}
 
 	#we-do-heading {
@@ -655,7 +726,7 @@ footer {
 	}
 
 	.services {
-		background-color: rgba(128, 128, 128, 0.1);
+		background-color:;
 		margin-top: 2rem;
 		padding-top: 2rem;
 		padding-bottom: 2rem;
@@ -664,12 +735,21 @@ footer {
 
 	}
 
+	.service-block {
+		grid-template-columns: 30% 30% 30%;
+		grid-column-gap:5%;
+		height: auto;
+		width: 90%;
+		margin: auto;
+	}
+
 	.service-icons {
 		display: flex;
 		flex-direction: row;
 		border: 1px solid darkorange;
-		margin-top:1rem;
+		margin-top: 1rem;
 		border-radius: 10px;
+		padding:0.5rem;
 	}
 
 	.service-icons img {
@@ -708,6 +788,19 @@ footer {
 
 	#about-desktop-describe {
 		width: 40vw;
+	}
+	
+	#send-message-block {
+		top: 2rem;
+	}
+	
+	.form-block {
+		width: 60rem;
+		margin-top:5rem;
+	}
+
+	.help-input {
+		width: 58rem;
 	}
 
 
